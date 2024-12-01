@@ -1,4 +1,8 @@
-import sys
+import sys, traceback
+
+TESTDATA = None
+if len(sys.argv) > 1:
+    TESTDATA = sys.argv[1]
 
 def open_input():
     filename = "input.txt"
@@ -12,9 +16,14 @@ def open_input():
         data.append(line.strip())
     return data
 
-TESTDATA = None
-if len(sys.argv) > 1:
-    TESTDATA = sys.argv[1]
+def check(actual, expected, variant="test"):
+    if (TESTDATA and variant == "test") or (not TESTDATA and variant != "test"):
+        if actual != expected:
+            print("CHECK FAILED:")
+            print("  actual:", actual)
+            print("expected:", expected)
+            print("\n".join(traceback.format_stack(limit=2)))
+            exit()
 
 data = open_input()
 
@@ -27,14 +36,21 @@ for line in data:
 left_list.sort()
 right_list.sort()
 
+check(left_list, [1, 2, 3, 3, 3, 4])
+check(right_list, [3, 3, 3, 4, 5, 9])
+
 total_differences = 0
 for i in range(0, len(left_list)):
     total_differences += abs(left_list[i] - right_list[i])
+
+check(total_differences, 11)
 
 print("part 1:", total_differences)
 
 total_similarity = 0
 for left_i in left_list:
     total_similarity += left_i * right_list.count(left_i)
+
+check(total_similarity, 31)
 
 print("part 2:", total_similarity)
