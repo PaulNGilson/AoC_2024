@@ -1,6 +1,5 @@
 import sys
 import copy
-#from functools import lru_cache
 
 def open_input():
     filename = "input.txt"
@@ -129,7 +128,6 @@ for x in range(0, len(data[0])):
 assert hori == {0: [4], 1: [9], 2: [], 3: [2], 4: [7], 5: [], 6: [1], 7: [8], 8: [0], 9: [6]} if TESTDATA else True
 assert vert == {0: [8], 1: [6], 2: [3], 3: [], 4: [0], 5: [], 6: [9], 7: [4], 8: [7], 9: [1]} if TESTDATA else True
 
-# @lru_cache(maxsize=None)
 def next_visit(orientation, obstacle_indices, current_index):
     """
     orientation is "normal" or "reverse"
