@@ -59,7 +59,6 @@ def expand_region(region_start, coords):
                     coords.remove(new_neighbour)
     return current_region, coords
 
-
 regions = []
 while coords:
     region_start = coords.pop()
@@ -69,11 +68,9 @@ while coords:
 
 total_price = 0
 for region in regions:
-    #print(data[region[0][1]][region[0][0]], region)
     fences = 0
     for plant in region["coords"]:
         plant_neighbours = get_neighbours(plant, include_outside_grid=True)
-        #print(set(plant_neighbours).difference(set(region)))
         fences += len(set(plant_neighbours).difference(set(region["coords"])))
     total_price += fences * len(region["coords"])
     region["fence_length"] = fences
