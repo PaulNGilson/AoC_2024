@@ -84,15 +84,21 @@ print("part 1:", total_price)
 Part 2's solution looks at pairs of cells in a plant region and, if they're
 adjacent, it looks at the adjacent cells on either side e.g.
 
-  X R
+  X   R
 
-  R R
+  R   R
 
-  M M
+  M   M
 
 If both of the plants on one side are different to the region's plant type,
 that's a straight fence continuation and so the fence length of that region is
 at least 1 fence shorter.
+
+  X | R
+  --+
+  R   R
+  -----
+  M   M
 """
 
 def adjacent(plant_pair):
