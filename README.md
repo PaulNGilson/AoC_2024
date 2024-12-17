@@ -21,8 +21,8 @@ aims I had last time:
 
 | Days | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 |-|-|-|-|-|-|-|-|-|-|-|-|-|
-| Stars | :star2: | :star2: | :star2: |  |  |  |  |  |  |  |  |  |
-| Time | 769 | 142 | 304 |  |  |  |  |  |  |  |  |  |
+| Stars | :star2: | :star2: | :star2: | :star2: |  |  |  |  |  |  |  |  |
+| Time | 769 | 142 | 304 | 53 |  |  |  |  |  |  |  |  |
 
 :star: means just the first star, :star2: means both stars, and :custard: (just
 because "custard" showed up while searching for emojis with "star" in the name)
