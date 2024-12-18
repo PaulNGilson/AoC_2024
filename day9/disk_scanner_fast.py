@@ -58,7 +58,13 @@ for block in range(0, len(answer_part1)):
 
 print("part 1:", checksum_part1)
 
+block = 0
+checksum_part2 = 0
+dealt_with_ids = []
+
 for n in range(id_number-1, 0, -1):
+    if n in dealt_with_ids:
+        break
     length_to_fit = file_id_and_length[n]
     for i in range(0, len(output_part2)):
         if output_part2[i][0] == n: # if find the whole file, we can stop looking for spaces
@@ -72,9 +78,16 @@ for n in range(id_number-1, 0, -1):
             else: # exact fit, so we just replace
                 output_part2[i] = [n, length_to_fit]
             break
+    while True:
+        if output_part2[0][0] != ".":
+            each = output_part2.pop(0)
+            for _ in range(0, each[1]):
+                checksum_part2 += block * each[0]
+                block += 1
+            dealt_with_ids.append(each[0])
+        else:
+            break
 
-block = 0
-checksum_part2 = 0
 for each in output_part2:
     if each[0] != ".":
         for _ in range(0, each[1]):
