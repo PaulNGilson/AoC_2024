@@ -21,8 +21,8 @@ aims I had last time:
 
 | Days | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 |-|-|-|-|-|-|-|-|-|-|-|-|-|
-| Stars | :star2: | :star2: | :star2: | :star2: | :star2: |  |  |  |  |  |  |  |
-| Time | 769 | 142 | 304 | 53 | 774 |  |  |  |  |  |  |  |
+| Stars | :star2: | :star2: | :star2: | :star2: | :star2: | :star2: |  |  |  |  |  |  |
+| Time | 769 | 142 | 304 | 53 | 774 | 480 |  |  |  |  |  |  |
 
 :star: means just the first star, :star2: means both stars, and :custard: (just
 because "custard" showed up while searching for emojis with "star" in the name)
@@ -31,3 +31,15 @@ daily-rate, as the days get busier through December...
 
 Times to run are just one example run, in milliseconds (unless specified
 otherwise).
+
+## Updates
+
+While completing the challenges, I was trying to keep performance to a "good"
+level - not just sub-15s, but as optimal as I could manage, on my own. Notes on
+this are below:
+
+* Day 19: my initial solution started at 5.5s - good but the slowest for the
+  year so far. New idea upon new idea, for once, just kept improving the time
+  which felt unusual for me - next was 3.5s, then 813ms, then finally 480ms.
+  I've put all three (I never kept one of the intermediate ones) significantly
+  different implementations in the repo.
