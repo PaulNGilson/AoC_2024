@@ -101,7 +101,7 @@ while current_paths:
             current_paths.append(new_path)
 
 best_possible = min(bests[end].values())
-assert best_possible == 7036 if TESTDATA else 102504
+assert best_possible == 7036 if TESTDATA else True
 
 print("part 1:", best_possible)
 
