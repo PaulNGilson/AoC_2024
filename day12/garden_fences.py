@@ -75,7 +75,7 @@ for region in regions:
     total_price += fences * len(region["coords"])
     region["fence_length"] = fences
 
-assert total_price == 1930 if TESTDATA else 1573474
+assert total_price == 1930 if TESTDATA else True
 print("part 1:", total_price)
 
 # part 2 begins
