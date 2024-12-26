@@ -10,9 +10,11 @@ aims I had last time:
   my own to all the challenges.
 * I can do any _non-Advent of Code_ research I like, from looking up potential
   algorithms, studying bits of mathematics, snippets from Stack Overflow, etc.
+  * _Edit: other than Python library documentation, I didn't need to do any
+    additional research this year._
 * No AI.
 * Final solutions should run in sub-15s and I'll rework where I can to make that
-  happen, but accept it probably won't be possible for all 25 days.
+  happen, ~~but accept it probably won't be possible for all 25 days~~.
 
 | Days | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 |
 |-|-|-|-|-|-|-|-|-|-|-|-|-|-|
@@ -22,7 +24,7 @@ aims I had last time:
 | Days | 14 | 15 | 16 | 17 | 18 | 19 | 20 | 21 | 22 | 23 | 24 | 25 |
 |-|-|-|-|-|-|-|-|-|-|-|-|-|
 | Stars | :star2: | :star2: | :star2: | :star2: | :star2: | :star2: | :star2: | :star2: | :star2: | :star2: | :star2: | :star2: |
-| Time | 769 | 142 | 304 | 53 | 774 | 480 | 2133 | 49 | 3883 | 49 | 60 | 82 |
+| Time | 769 | 142 | 304 | 53 | 774 | 480 | 2133 | 49 | 2735 | 49 | 60 | 82 |
 
 :star: means just the first star, :star2: means both stars, and :custard: (just
 because "custard" showed up while searching for emojis with "star" in the name)
@@ -43,3 +45,4 @@ this are below:
   which felt unusual for me - next was 3.5s, then 813ms, then finally 480ms.
   I've put all three (I never kept one of the intermediate ones) significantly
   different implementations in the repo.
+* Sub-20s **overall** was an unexpected reward from this year!

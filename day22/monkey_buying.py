@@ -22,37 +22,30 @@ data = open_input()
 def step_one(n):
     return ((n*64) ^ n) % 16777216
 def step_two(n):
-    return (int(n/32) ^ n) % 16777216
+    return (int(n/32) ^ n) # can skip % 16777216 here as it's irrelevant
 def step_three(n):
     return ((n*2048) ^ n) % 16777216
 
 total_two_thousandth_secret_nums = 0
-for secret_number in [int(line) for line in data]:
-    for _ in range(0, 2000):
-        secret_number = step_three(step_two(step_one(secret_number)))
-    total_two_thousandth_secret_nums += secret_number
-
-print("part 1:", total_two_thousandth_secret_nums)
-
-# part 2 begins
-
 overall_sequence_prices = defaultdict(int)
 
 for secret_number in [int(line) for line in data]:
     change_prices = []
-    for _ in range(0, 2000):
+    sequence_prices = set()
+    for i in range(0, 2000):
         new_secret_number = step_three(step_two(step_one(secret_number)))
         change_prices.append((str(new_secret_number % 10 - secret_number % 10), new_secret_number % 10))
         secret_number = new_secret_number
-    sequence_prices = {}
-    for i in range(0, len(change_prices)-3):
-        sequence = ",".join([change_prices[i][0], change_prices[i+1][0], change_prices[i+2][0], change_prices[i+3][0]])
-        if sequence not in sequence_prices:
-            sequence_prices[sequence] = change_prices[i+3][1]
+        if i >= 3:
+            sequence = ",".join([change_prices[i-3][0], change_prices[i-2][0], change_prices[i-1][0], change_prices[i][0]])
+            if sequence not in sequence_prices:
+                sequence_prices.add(sequence)
+                overall_sequence_prices[sequence] += change_prices[i][1]
+    total_two_thousandth_secret_nums += secret_number
 
-    for sequence_price in sequence_prices:
-        overall_sequence_prices[sequence_price] += sequence_prices[sequence_price]
+assert total_two_thousandth_secret_nums == 37327623 if TESTDATA else True
+print("part 1:", total_two_thousandth_secret_nums)
 
 best_price = max(overall_sequence_prices.values())
-#print(list(overall_sequence_prices.keys())[list(overall_sequence_prices.values()).index(best_price)])
+assert best_price == 24 if TESTDATA else True
 print("part 2:", best_price)
