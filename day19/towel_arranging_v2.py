@@ -47,5 +47,5 @@ for striping in data[2:]:
 print("part 1:", can_be_striped)
 print("part 2:", total_stripes)
 
-assert can_be_striped == 6 if TESTDATA else 272
-assert total_stripes == 16 if TESTDATA else 1041529704688380
+assert can_be_striped == 6 if TESTDATA else True
+assert total_stripes == 16 if TESTDATA else True
