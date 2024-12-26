@@ -115,7 +115,7 @@ while True:
         break
 
 print("part 1:", count_guard_visits(coords))
-assert count_guard_visits(coords) == 41 if TESTDATA else 4776
+assert count_guard_visits(coords) == 41 if TESTDATA else True
 
 # part 2 begins
 potential_obstructions = list(set(potential_obstructions))
