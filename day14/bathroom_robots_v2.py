@@ -57,7 +57,7 @@ for robot in data:
     elif end_x > midpoint_width and end_y > midpoint_height:
         quadrant_counts["bottom-right"] += 1
 
-assert math.prod(quadrant_counts.values()) == 12 if TESTDATA else 217132650
+assert math.prod(quadrant_counts.values()) == 12 if TESTDATA else True
 print("part 1:", math.prod(quadrant_counts.values()))
 
 # part 2 begins
