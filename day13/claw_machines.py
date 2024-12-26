@@ -67,7 +67,7 @@ for machine in machines:
     if optimal_tokens != 100000:
         total_token_spend += optimal_tokens
 
-assert total_token_spend == 480 if TESTDATA else 30973
+assert total_token_spend == 480 if TESTDATA else True
 print("part 1:", total_token_spend)
 
 # part 2 begins
