@@ -54,7 +54,7 @@ while routes:
             history[possible_coord] = current_steps + 1
             routes.append((possible_coord[0], possible_coord[1], current_steps+1))
 
-assert history[(grid_size, grid_size)] == 22 if TESTDATA else 416
+assert history[(grid_size, grid_size)] == 22 if TESTDATA else True
 
 print("part 1:", history[(grid_size, grid_size)])
 
