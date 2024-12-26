@@ -72,8 +72,8 @@ for antenna_notation in antennas.keys():
 antinodes_part1_count = len(set(antinodes_part1))
 antinodes_part2_count = len(set(antinodes_part2))
 
-assert antinodes_part1_count == 14 if TESTDATA else 222
-assert antinodes_part2_count == 34 if TESTDATA else 884
+assert antinodes_part1_count == 14 if TESTDATA else True
+assert antinodes_part2_count == 34 if TESTDATA else True
 
 print("part 1:", antinodes_part1_count)
 print("part 2:", antinodes_part2_count)
