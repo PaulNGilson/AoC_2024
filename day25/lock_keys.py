@@ -69,6 +69,6 @@ for d_lock in digital_locks:
         if max(combined) <= 7:
             fits += 1
 
-assert fits == 3 if TESTDATA else 3201
+assert fits == 3 if TESTDATA else True
 
 print("part 1:", fits)
